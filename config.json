@@ -4,7 +4,36 @@
         "password": "123456",
         "host": "127.0.0.1",
         "port": 27017,
-        "db_name": "yz_cms_db"
+        "db_name": "yz_cms_db",
+        "query_batch": {
+            "page_size": 100,
+            "batch_size": 100,
+            "max_workers": 4,
+            "throttling": {
+                "batch_frequency": 100,
+                "min_wait": 0.0,
+                "max_wait": 1.0
+            }
+        }
     },
-    "quark_cookies": ""
+    "quark": {
+        "cookies": "",
+        "retry_times": 3
+    },
+    "processing": {
+        "category": "网络资源",
+        "source": 4,
+        "time_range": {
+            "start": "2025-02-19",
+            "end": "2025-02-20"
+        },
+        "recent": null,
+        "print_query": true
+    },
+    "logging": {
+        "filename": "data_processing.log",
+        "level": "INFO",
+        "max_bytes": 10485760,
+        "backup_count": 5
+    }
 }
