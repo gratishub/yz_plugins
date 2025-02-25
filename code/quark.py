@@ -1,12 +1,6 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Modify: 2024-11-13
-# Repo: https://github.com/Cp0204/quark_auto_save
-# ConfigFile: quark_config.json
-"""
-new Env('夸克自动追更');
-0 8,18,20 * * * quark_auto_save.py
-"""
+# CiteBy: https://github.com/Cp0204/quark_auto_save
 import os
 import re
 import time
