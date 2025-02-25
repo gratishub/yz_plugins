@@ -1,6 +1,6 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# CiteBy: https://github.com/Cp0204/quark_auto_save
+# repository: https://github.com/Cp0204/quark_auto_save
 import os
 import re
 import time
