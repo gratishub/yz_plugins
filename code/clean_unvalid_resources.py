@@ -100,7 +100,7 @@ class ResourceProcessor:
         client = pymongo.MongoClient(
             f"mongodb://{mongo_cfg['username']}:{mongo_cfg['password']}"
             f"@{mongo_cfg['host']}:{mongo_cfg['port']}/?authSource=admin",
-            event_listeners=[MyCommandLogger(self.logger)]
+            event_listeners=[MongoCommandMonitor(self.logger)]
         )
         return client[mongo_cfg['db_name']]['d_site_resource']
 
@@ -206,7 +206,7 @@ class ResourceProcessor:
 
 def main():
     try:
-        config = load_and_validate_config(config_path='config.json')
+        config = load_and_validate_config(config_path='config-dev.json')
         processor = ResourceProcessor(config)
         processor.process_batch()
     except (ConfigValidationError, PyMongoError) as e:
