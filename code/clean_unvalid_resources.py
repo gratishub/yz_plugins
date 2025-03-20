@@ -206,7 +206,7 @@ class ResourceProcessor:
 
 def main():
     try:
-        config = load_and_validate_config(config_path='config-dev.json')
+        config = load_and_validate_config(config_path='config.json')
         processor = ResourceProcessor(config)
         processor.process_batch()
     except (ConfigValidationError, PyMongoError) as e:
